@@ -998,7 +998,6 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [currentPreference, setCurrentPreference] = useState<Preference | null>(null);
   const [selectedRec, setSelectedRec] = useState<Recommendation | null>(null);
-  const [currentOrder, setCurrentOrder] = useState<Order | null>(null);
   const [currentTicket, setCurrentTicket] = useState<Ticket | null>(null);
   
   // New: Booking History
@@ -1022,7 +1021,6 @@ const App = () => {
   };
 
   const handlePaymentSuccess = (order: Order, ticket: Ticket) => {
-    setCurrentOrder(order);
     setCurrentTicket(ticket);
     
     // Add to history
@@ -1041,7 +1039,6 @@ const App = () => {
   };
   
   const handleActivateFromHistory = (record: BookingRecord) => {
-    setCurrentOrder(record.order);
     setCurrentTicket(record.ticket);
     // Mock the recommendation object just enough for the Activation View to render the attraction details
     setSelectedRec({
@@ -1058,7 +1055,6 @@ const App = () => {
     // Retain user if desired, or reset everything. Resetting partial for flow demo.
     setCurrentPreference(null);
     setSelectedRec(null);
-    setCurrentOrder(null);
     setCurrentTicket(null);
     setView(View.PREFERENCES); 
   };
@@ -1068,7 +1064,6 @@ const App = () => {
     setCurrentUser(null);
     setCurrentPreference(null);
     setSelectedRec(null);
-    setCurrentOrder(null);
     setCurrentTicket(null);
     setBookingHistory([]);
     setView(View.LANDING);
