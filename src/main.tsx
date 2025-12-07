@@ -91,203 +91,30 @@ const EXCHANGE_RATES: Record<string, number> = {
 };
 
 const ALL_COUNTRIES = [
-  'Afghanistan',
-  'Albania',
-  'Algeria',
-  'Andorra',
-  'Angola',
-  'Antigua and Barbuda',
-  'Argentina',
-  'Armenia',
-  'Australia',
-  'Austria',
-  'Azerbaijan',
-  'Bahamas, The',
-  'Bahrain',
-  'Bangladesh',
-  'Barbados',
-  'Belarus',
-  'Belgium',
-  'Belize',
-  'Benin',
-  'Bhutan',
-  'Bolivia',
-  'Bosnia and Herzegovina',
-  'Botswana',
-  'Brazil',
-  'Brunei',
-  'Bulgaria',
-  'Burkina Faso',
-  'Burundi',
-  'Cabo Verde',
-  'Cambodia',
-  'Cameroon',
-  'Canada',
-  'Central African Republic',
-  'Chad',
-  'Chile',
-  "China (People's Republic of China)",
-  'Colombia',
-  'Comoros',
-  'Congo (Congo-Brazzaville)',
-  'Congo, Democratic Republic of the (Congo-Kinshasa)',
-  'Costa Rica',
-  "Côte d'Ivoire",
-  'Croatia',
-  'Cuba',
-  'Cyprus',
-  'Czechia (Czech Republic)',
-  'Denmark',
-  'Djibouti',
-  'Dominica',
-  'Dominican Republic',
-  'Ecuador',
-  'Egypt',
-  'El Salvador',
-  'Equatorial Guinea',
-  'Eritrea',
-  'Estonia',
-  'Eswatini',
-  'Ethiopia',
-  'Fiji',
-  'Finland',
-  'France',
-  'Gabon',
-  'Gambia, The',
-  'Georgia',
-  'Germany',
-  'Ghana',
-  'Greece',
-  'Grenada',
-  'Guatemala',
-  'Guinea',
-  'Guinea-Bissau',
-  'Guyana',
-  'Haiti',
-  'Holy See (Vatican City)',
-  'Honduras',
-  'Hungary',
-  'Iceland',
-  'India',
-  'Indonesia',
-  'Iran',
-  'Iraq',
-  'Ireland',
-  'Israel',
-  'Italy',
-  'Jamaica',
-  'Japan',
-  'Jordan',
-  'Kazakhstan',
-  'Kenya',
-  'Kiribati',
-  "Korea, North (Democratic People's Republic of Korea)",
-  'Korea, South (Republic of Korea)',
-  'Kosovo',
-  'Kuwait',
-  'Kyrgyzstan',
-  'Laos',
-  'Latvia',
-  'Lebanon',
-  'Lesotho',
-  'Liberia',
-  'Libya',
-  'Liechtenstein',
-  'Lithuania',
-  'Luxembourg',
-  'Madagascar',
-  'Malawi',
-  'Malaysia',
-  'Maldives',
-  'Mali',
-  'Malta',
-  'Marshall Islands',
-  'Mauritania',
-  'Mauritius',
-  'Mexico',
-  'Micronesia, Federated States of',
-  'Moldova',
-  'Monaco',
-  'Mongolia',
-  'Montenegro',
-  'Morocco',
-  'Mozambique',
-  'Myanmar (Burma)',
-  'Namibia',
-  'Nauru',
-  'Nepal',
-  'Netherlands',
-  'New Zealand',
-  'Nicaragua',
-  'Niger',
-  'Nigeria',
-  'North Macedonia',
-  'Norway',
-  'Oman',
-  'Pakistan',
-  'Palau',
-  'Palestine, State of',
-  'Panama',
-  'Papua New Guinea',
-  'Paraguay',
-  'Peru',
-  'Philippines',
-  'Poland',
-  'Portugal',
-  'Qatar',
-  'Romania',
-  'Russia (Russian Federation)',
-  'Rwanda',
-  'Saint Kitts and Nevis',
-  'Saint Lucia',
-  'Saint Vincent and the Grenadines',
-  'Samoa',
-  'San Marino',
-  'São Tomé and Príncipe',
-  'Saudi Arabia',
-  'Senegal',
-  'Serbia',
-  'Seychelles',
-  'Sierra Leone',
-  'Singapore',
-  'Slovakia',
-  'Slovenia',
-  'Solomon Islands',
-  'Somalia',
-  'South Africa',
-  'South Sudan',
-  'Spain',
-  'Sri Lanka',
-  'Sudan',
-  'Suriname',
-  'Sweden',
-  'Switzerland',
-  'Syria',
-  'Taiwan',
-  'Tajikistan',
-  'Tanzania',
-  'Thailand',
-  'Timor-Leste',
-  'Togo',
-  'Tonga',
-  'Trinidad and Tobago',
-  'Tunisia',
-  'Turkey',
-  'Turkmenistan',
-  'Tuvalu',
-  'Uganda',
-  'Ukraine',
-  'United Arab Emirates',
-  'United Kingdom',
-  'United States of America',
-  'Uruguay',
-  'Uzbekistan',
-  'Vanuatu',
-  'Venezuela',
-  'Vietnam',
-  'Yemen',
-  'Zambia',
-  'Zimbabwe',
+  "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan",
+  "Bahamas, The", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi",
+  "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China (People's Republic of China)", "Colombia", "Comoros", "Congo (Congo-Brazzaville)", "Congo, Democratic Republic of the (Congo-Kinshasa)", "Costa Rica", "Côte d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia (Czech Republic)",
+  "Denmark", "Djibouti", "Dominica", "Dominican Republic",
+  "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia",
+  "Fiji", "Finland", "France",
+  "Gabon", "Gambia, The", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana",
+  "Haiti", "Holy See (Vatican City)", "Honduras", "Hungary",
+  "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy",
+  "Jamaica", "Japan", "Jordan",
+  "Kazakhstan", "Kenya", "Kiribati", "Korea, North (Democratic People's Republic of Korea)", "Korea, South (Republic of Korea)", "Kosovo", "Kuwait", "Kyrgyzstan",
+  "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg",
+  "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia, Federated States of", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar (Burma)",
+  "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway",
+  "Oman",
+  "Pakistan", "Palau", "Palestine, State of", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
+  "Qatar",
+  "Romania", "Russia (Russian Federation)", "Rwanda",
+  "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "São Tomé and Príncipe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syria",
+  "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu",
+  "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan",
+  "Vanuatu", "Venezuela", "Vietnam",
+  "Yemen",
+  "Zambia", "Zimbabwe"
 ];
 
 // --- Data (Updated to match ERD Attraction entity) ---
@@ -351,8 +178,7 @@ const ATTRACTIONS_DATA: Attraction[] = [
     Name: 'teamLab Borderless Jeddah',
     City: 'Jeddah',
     Country: 'Saudi Arabia',
-    Description:
-      'A world of artworks without boundaries, a museum without a map.',
+    Description: 'A world of artworks without boundaries, a museum without a map.',
     Expected_Price: 150, // SAR
     Average_Rating: 4.9,
     Activity: 'Immersive Digital Art',
@@ -392,8 +218,7 @@ const ATTRACTIONS_DATA: Attraction[] = [
     Name: 'Atlantis – The Immersive Odyssey',
     City: 'Manama',
     Country: 'Bahrain',
-    Description:
-      'Immersive exhibition covering 1000 sqm, recreating the legend of Atlantis.',
+    Description: 'Immersive exhibition covering 1000 sqm, recreating the legend of Atlantis.',
     Expected_Price: 9.5, // BHD
     Average_Rating: 4.6,
     Activity: 'VR / AI / Interactive',
@@ -405,8 +230,7 @@ const ATTRACTIONS_DATA: Attraction[] = [
     Name: 'EVA Virtual Reality',
     City: 'Manama',
     Country: 'Bahrain',
-    Description:
-      'Ultra-immersive free-roam VR esports arena for up to 10 players.',
+    Description: 'Ultra-immersive free-roam VR esports arena for up to 10 players.',
     Expected_Price: 9.5, // BHD
     Average_Rating: 4.9,
     Activity: 'Free-Roam VR Arena',
@@ -418,8 +242,7 @@ const ATTRACTIONS_DATA: Attraction[] = [
     Name: 'Matrix BH',
     City: 'Manama',
     Country: 'Bahrain',
-    Description:
-      'Large indoor entertainment center with VR experiences, escape rooms, and physical challenges.',
+    Description: 'Large indoor entertainment center with VR experiences, escape rooms, and physical challenges.',
     Expected_Price: 11.0, // BHD (Package)
     Average_Rating: 4.5,
     Activity: 'VR / Gaming Center',
@@ -431,8 +254,7 @@ const ATTRACTIONS_DATA: Attraction[] = [
     Name: 'Another World VR',
     City: 'Manama',
     Country: 'Bahrain',
-    Description:
-      'VR gaming arena using advanced tracking technology for sci-fi and shooting experiences.',
+    Description: 'VR gaming arena using advanced tracking technology for sci-fi and shooting experiences.',
     Expected_Price: 7.0, // BHD
     Average_Rating: 4.8,
     Activity: 'VR Gaming Arena',
@@ -444,8 +266,7 @@ const ATTRACTIONS_DATA: Attraction[] = [
     Name: 'Qal’at Al Bahrain Site Museum',
     City: 'Manama',
     Country: 'Bahrain',
-    Description:
-      'Museum utilizing AR technology to recreate ancient Dilmun civilization at the UNESCO World Heritage site.',
+    Description: 'Museum utilizing AR technology to recreate ancient Dilmun civilization at the UNESCO World Heritage site.',
     Expected_Price: 2.0, // BHD
     Average_Rating: 4.7,
     Activity: 'AR Experience / Heritage',
@@ -458,8 +279,7 @@ const ATTRACTIONS_DATA: Attraction[] = [
     Name: 'Oman Across Ages Museum',
     City: 'Manah',
     Country: 'Oman',
-    Description:
-      "Newly opened museum using extensive AR/VR to showcase Oman's history.",
+    Description: 'Newly opened museum using extensive AR/VR to showcase Oman\'s history.',
     Expected_Price: 5.0, // OMR
     Average_Rating: 4.8,
     Activity: 'Immersive History Museum',
@@ -472,8 +292,7 @@ const ATTRACTIONS_DATA: Attraction[] = [
     Name: 'Sheikh Abdullah Al Salem Cultural Centre',
     City: 'Salmiya',
     Country: 'Kuwait',
-    Description:
-      'Features Space Museum and Science Centre with VR space walks and 4D theaters.',
+    Description: 'Features Space Museum and Science Centre with VR space walks and 4D theaters.',
     Expected_Price: 3.0, // KWD
     Average_Rating: 4.7,
     Activity: 'Science & Space Museum',
@@ -485,8 +304,7 @@ const ATTRACTIONS_DATA: Attraction[] = [
     Name: 'WARPOINT',
     City: 'Kuwait City',
     Country: 'Kuwait',
-    Description:
-      'Wireless free-roam VR arena offering team-based tactical shooters.',
+    Description: 'Wireless free-roam VR arena offering team-based tactical shooters.',
     Expected_Price: 5.0, // KWD
     Average_Rating: 4.9,
     Activity: 'Free-Roam VR Arena',
@@ -499,8 +317,7 @@ const ATTRACTIONS_DATA: Attraction[] = [
     Name: 'Hagia Sophia History & Experience Museum',
     City: 'Istanbul',
     Country: 'Turkey',
-    Description:
-      'Experience museum near Hagia Sophia using immersive projection and AR audio guides.',
+    Description: 'Experience museum near Hagia Sophia using immersive projection and AR audio guides.',
     Expected_Price: 25.0, // EUR
     Average_Rating: 4.0,
     Activity: 'Immersive Digital Museum',
@@ -513,8 +330,7 @@ const ATTRACTIONS_DATA: Attraction[] = [
     Name: 'Tower of David Jerusalem Museum',
     City: 'Jerusalem',
     Country: 'Israel',
-    Description:
-      "Offers 'Step into History' VR tour allowing visitors to see the ancient city as it was.",
+    Description: 'Offers \'Step into History\' VR tour allowing visitors to see the ancient city as it was.',
     Expected_Price: 50.0, // NIS
     Average_Rating: 4.6,
     Activity: 'VR / AR Historic Tour',
@@ -722,10 +538,7 @@ const PreferencesForm = ({
               onChange={(e) =>
                 setForm({
                   ...form,
-                  Date_Range: {
-                    ...(form.Date_Range as any),
-                    Start: e.target.value,
-                  },
+                  Date_Range: { ...(form.Date_Range as any), Start: e.target.value },
                 })
               }
             />
@@ -740,10 +553,7 @@ const PreferencesForm = ({
               onChange={(e) =>
                 setForm({
                   ...form,
-                  Date_Range: {
-                    ...(form.Date_Range as any),
-                    End: e.target.value,
-                  },
+                  Date_Range: { ...(form.Date_Range as any), End: e.target.value },
                 })
               }
             />
@@ -756,9 +566,7 @@ const PreferencesForm = ({
           type="number"
           min="1"
           value={form.Travelers}
-          onChange={(e) =>
-            setForm({ ...form, Travelers: Number(e.target.value) })
-          }
+          onChange={(e) => setForm({ ...form, Travelers: Number(e.target.value) })}
         />
 
         <button
@@ -802,7 +610,7 @@ const RecommendationsList = ({
         let score = attraction.Average_Rating * 20; // Base out of 100
         if (totalUSD <= preference.Budget) score += 5; // Within budget bonus
         else score -= 10; // Over budget penalty
-
+        
         // Clamp score
         score = Math.min(99, Math.max(60, score));
 
@@ -821,9 +629,8 @@ const RecommendationsList = ({
     <div className="animate-enter">
       <h2>Recommended Attractions</h2>
       <p style={{ marginBottom: '30px' }}>
-        Based on your preference for{' '}
-        <strong>{preference.Destination_Country}</strong> with a budget of{' '}
-        <strong>${preference.Budget}</strong>.
+        Based on your preference for <strong>{preference.Destination_Country}</strong>{' '}
+        with a budget of <strong>${preference.Budget}</strong>.
       </p>
 
       {recommendations.length === 0 ? (
@@ -852,14 +659,8 @@ const RecommendationsList = ({
                   position: 'absolute',
                   top: '16px',
                   right: '16px',
-                  background:
-                    rec.Calculated_Cost_USD <= preference.Budget
-                      ? '#e6f4ea'
-                      : '#fce8e6',
-                  color:
-                    rec.Calculated_Cost_USD <= preference.Budget
-                      ? '#1e8e3e'
-                      : '#c5221f',
+                  background: rec.Calculated_Cost_USD <= preference.Budget ? '#e6f4ea' : '#fce8e6',
+                  color: rec.Calculated_Cost_USD <= preference.Budget ? '#1e8e3e' : '#c5221f',
                   padding: '4px 10px',
                   borderRadius: '20px',
                   fontSize: '12px',
@@ -872,27 +673,12 @@ const RecommendationsList = ({
               <h3 style={{ marginTop: '10px', marginBottom: '5px' }}>
                 {rec.Attraction.Name}
               </h3>
-              <div
-                style={{
-                  color: '#f59e0b',
-                  fontSize: '14px',
-                  marginBottom: '10px',
-                }}
-              >
-                {'★'.repeat(Math.round(rec.Attraction.Average_Rating))}
-                <span style={{ color: '#888', marginLeft: '5px' }}>
-                  {rec.Attraction.Average_Rating}
-                </span>
+              <div style={{color: '#f59e0b', fontSize: '14px', marginBottom: '10px'}}>
+                {'★'.repeat(Math.round(rec.Attraction.Average_Rating))} 
+                <span style={{color: '#888', marginLeft: '5px'}}>{rec.Attraction.Average_Rating}</span>
               </div>
-
-              <p
-                style={{
-                  fontSize: '13px',
-                  color: '#666',
-                  lineHeight: '1.5',
-                  flexGrow: 1,
-                }}
-              >
+              
+              <p style={{ fontSize: '13px', color: '#666', lineHeight: '1.5', flexGrow: 1 }}>
                 {rec.Attraction.Description}
               </p>
 
@@ -904,25 +690,13 @@ const RecommendationsList = ({
                   marginTop: '15px',
                 }}
               >
-                <div
-                  style={{
-                    fontSize: '12px',
-                    color: '#555',
-                    marginBottom: '4px',
-                  }}
-                >
+                <div style={{ fontSize: '12px', color: '#555', marginBottom: '4px' }}>
                   Activity: <strong>{rec.Attraction.Activity}</strong>
                 </div>
                 <div style={{ fontSize: '12px', color: '#555' }}>
                   Total Est. Price ({preference.Travelers} pax):
                 </div>
-                <div
-                  style={{
-                    fontSize: '20px',
-                    fontWeight: 'bold',
-                    color: '#333',
-                  }}
-                >
+                <div style={{ fontSize: '20px', fontWeight: 'bold', color: '#333' }}>
                   ${rec.Calculated_Cost_USD.toFixed(2)}
                 </div>
               </div>
@@ -938,7 +712,7 @@ const RecommendationsList = ({
           ))}
         </div>
       )}
-      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+      <div style={{maxWidth: '1000px', margin: '0 auto'}}>
         <BackButton onClick={onBack} />
       </div>
     </div>
@@ -1004,87 +778,40 @@ const PaymentProcess = ({
           marginBottom: '20px',
         }}
       >
-        <h4
-          style={{
-            marginTop: 0,
-            color: '#666',
-            borderBottom: '1px solid #eee',
-            paddingBottom: '10px',
-          }}
-        >
-          Order Summary
-        </h4>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            marginBottom: '10px',
-          }}
-        >
-          <span>User:</span>
-          <strong>
-            {user.Name} ({user.Nationality})
-          </strong>
+        <h4 style={{marginTop: 0, color: '#666', borderBottom: '1px solid #eee', paddingBottom: '10px'}}>Order Summary</h4>
+        <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '10px'}}>
+            <span>User:</span>
+            <strong>{user.Name} ({user.Nationality})</strong>
         </div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            marginBottom: '10px',
-          }}
-        >
-          <span>Attraction:</span>
-          <strong>{recommendation.Attraction.Name}</strong>
+        <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '10px'}}>
+            <span>Attraction:</span>
+            <strong>{recommendation.Attraction.Name}</strong>
         </div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            marginBottom: '10px',
-          }}
-        >
-          <span>Details:</span>
-          <span>{recommendation.Ticket_Details}</span>
+        <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '10px'}}>
+            <span>Details:</span>
+            <span>{recommendation.Ticket_Details}</span>
         </div>
-
-        <hr
-          style={{
-            border: 'none',
-            borderTop: '1px solid #eee',
-            margin: '20px 0',
-          }}
+        
+        <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '20px 0' }} />
+        
+        <label style={{marginTop: 0}}>Promo Code</label>
+        <input 
+            value={promo} 
+            onChange={(e) => setPromo(e.target.value)} 
+            placeholder="Optional"
+            style={{marginBottom: '20px'}}
         />
 
-        <label style={{ marginTop: 0 }}>Promo Code</label>
-        <input
-          value={promo}
-          onChange={(e) => setPromo(e.target.value)}
-          placeholder="Optional"
-          style={{ marginBottom: '20px' }}
-        />
-
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}
-        >
-          <span style={{ fontSize: '18px' }}>Total:</span>
-          <span style={{ fontSize: '24px', fontWeight: 'bold' }}>
-            ${recommendation.Calculated_Cost_USD.toFixed(2)}
-          </span>
+        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+            <span style={{fontSize: '18px'}}>Total:</span>
+            <span style={{fontSize: '24px', fontWeight: 'bold'}}>${recommendation.Calculated_Cost_USD.toFixed(2)}</span>
         </div>
 
         <button
           onClick={handlePayment}
           disabled={processing}
           className="primary-button"
-          style={{
-            width: '100%',
-            marginTop: '20px',
-            opacity: processing ? 0.7 : 1,
-          }}
+          style={{ width: '100%', marginTop: '20px', opacity: processing ? 0.7 : 1 }}
         >
           {processing ? 'Verifying Payment...' : 'Confirm Transaction'}
         </button>
@@ -1112,9 +839,7 @@ const TourActivation = ({
       Experience_Id: `EXP-${Date.now()}`,
       Start_Time: new Date().toLocaleTimeString(),
       End_Time: 'In Progress',
-      Experience_Mode: attraction.Activity.includes('VR')
-        ? 'VR Headset'
-        : 'Mobile AR',
+      Experience_Mode: attraction.Activity.includes('VR') ? 'VR Headset' : 'Mobile AR',
       Status: 'Active',
     };
     setTour(newTour);
@@ -1124,42 +849,18 @@ const TourActivation = ({
     <div className="container animate-enter">
       {!tour ? (
         <>
-          <div style={{ fontSize: '50px', marginBottom: '10px' }}>🎟️</div>
+          <div style={{fontSize: '50px', marginBottom: '10px'}}>🎟️</div>
           <h2>Payment Confirmed!</h2>
           <p>Your ticket has been issued.</p>
-
-          <div
-            style={{
-              background: '#f5f5f5',
-              padding: '20px',
-              borderRadius: '8px',
-              margin: '30px 0',
-              border: '2px dashed #ccc',
-            }}
-          >
-            <div
-              style={{ fontSize: '12px', color: '#666', marginBottom: '5px' }}
-            >
-              TICKET ID
-            </div>
-            <div
-              style={{
-                fontSize: '24px',
-                fontFamily: 'monospace',
-                fontWeight: 'bold',
-              }}
-            >
-              {ticket.Ticket_Id}
-            </div>
-            <div style={{ fontSize: '12px', color: '#666', marginTop: '10px' }}>
-              EXP: {new Date(ticket.Expiration_Date).toLocaleDateString()}
-            </div>
+          
+          <div style={{background: '#f5f5f5', padding: '20px', borderRadius: '8px', margin: '30px 0', border: '2px dashed #ccc'}}>
+             <div style={{fontSize: '12px', color: '#666', marginBottom: '5px'}}>TICKET ID</div>
+             <div style={{fontSize: '24px', fontFamily: 'monospace', fontWeight: 'bold'}}>{ticket.Ticket_Id}</div>
+             <div style={{fontSize: '12px', color: '#666', marginTop: '10px'}}>EXP: {new Date(ticket.Expiration_Date).toLocaleDateString()}</div>
           </div>
 
-          <p style={{ marginBottom: '30px' }}>
-            Ready to start your {attraction.Activity} experience?
-          </p>
-
+          <p style={{marginBottom: '30px'}}>Ready to start your {attraction.Activity} experience?</p>
+          
           <button onClick={activateTour} className="primary-button">
             Activate AR/VR Tour
           </button>
@@ -1167,76 +868,36 @@ const TourActivation = ({
       ) : (
         <>
           <div className="animate-enter">
-            <div
-              style={{
-                fontSize: '60px',
-                marginBottom: '20px',
-                animation: 'spin 10s linear infinite',
-              }}
-            >
-              🕶️
-            </div>
+            <div style={{fontSize: '60px', marginBottom: '20px', animation: 'spin 10s linear infinite'}}>🕶️</div>
             <h2>Tour Active</h2>
-            <div
-              style={{
-                textAlign: 'left',
-                background: '#333',
-                color: '#fff',
-                padding: '30px',
-                borderRadius: '12px',
-                marginTop: '30px',
-              }}
-            >
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '1fr 1fr',
-                  gap: '20px',
-                }}
-              >
-                <div>
-                  <div style={{ fontSize: '12px', opacity: 0.7 }}>
-                    Experience ID
-                  </div>
-                  <div>{tour.Experience_Id}</div>
+            <div style={{textAlign: 'left', background: '#333', color: '#fff', padding: '30px', borderRadius: '12px', marginTop: '30px'}}>
+                <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px'}}>
+                    <div>
+                        <div style={{fontSize: '12px', opacity: 0.7}}>Experience ID</div>
+                        <div>{tour.Experience_Id}</div>
+                    </div>
+                    <div>
+                        <div style={{fontSize: '12px', opacity: 0.7}}>Status</div>
+                        <div style={{color: '#4ade80', fontWeight: 'bold'}}>● {tour.Status}</div>
+                    </div>
+                    <div>
+                        <div style={{fontSize: '12px', opacity: 0.7}}>Mode</div>
+                        <div>{tour.Experience_Mode}</div>
+                    </div>
+                    <div>
+                        <div style={{fontSize: '12px', opacity: 0.7}}>Start Time</div>
+                        <div>{tour.Start_Time}</div>
+                    </div>
                 </div>
-                <div>
-                  <div style={{ fontSize: '12px', opacity: 0.7 }}>Status</div>
-                  <div style={{ color: '#4ade80', fontWeight: 'bold' }}>
-                    ● {tour.Status}
-                  </div>
-                </div>
-                <div>
-                  <div style={{ fontSize: '12px', opacity: 0.7 }}>Mode</div>
-                  <div>{tour.Experience_Mode}</div>
-                </div>
-                <div>
-                  <div style={{ fontSize: '12px', opacity: 0.7 }}>
-                    Start Time
-                  </div>
-                  <div>{tour.Start_Time}</div>
-                </div>
-              </div>
             </div>
-            <p style={{ marginTop: '30px', fontSize: '14px', color: '#888' }}>
-              Enjoy your immersive experience at {attraction.Name}!
-            </p>
+            <p style={{marginTop: '30px', fontSize: '14px', color: '#888'}}>Enjoy your immersive experience at {attraction.Name}!</p>
           </div>
         </>
       )}
 
-      <div style={{ marginTop: '50px' }}>
-        <button
-          onClick={onReset}
-          style={{
-            background: 'none',
-            border: 'none',
-            textDecoration: 'underline',
-            cursor: 'pointer',
-            color: '#666',
-          }}
-        >
-          Start New Booking
+      <div style={{marginTop: '50px'}}>
+        <button onClick={onReset} style={{background: 'none', border: 'none', textDecoration: 'underline', cursor: 'pointer', color: '#666'}}>
+            Start New Booking
         </button>
       </div>
     </div>
@@ -1247,7 +908,7 @@ const TourActivation = ({
 const SubscriptionsList = ({
   history,
   onActivate,
-  onBack,
+  onBack
 }: {
   history: BookingRecord[];
   onActivate: (record: BookingRecord) => void;
@@ -1256,38 +917,21 @@ const SubscriptionsList = ({
   return (
     <div className="animate-enter">
       <h2>My Bookings</h2>
-      <p style={{ marginBottom: '40px' }}>
-        Review your active subscriptions and ticket history.
-      </p>
-
+      <p style={{marginBottom: '40px'}}>Review your active subscriptions and ticket history.</p>
+      
       {history.length === 0 ? (
-        <div
-          style={{
-            padding: '40px',
-            background: '#f9f9f9',
-            borderRadius: '12px',
-          }}
-        >
+        <div style={{padding: '40px', background: '#f9f9f9', borderRadius: '12px'}}>
           <p>No subscriptions found yet.</p>
-          <button
-            onClick={onBack}
-            style={{
-              background: 'none',
-              border: 'none',
-              textDecoration: 'underline',
-              cursor: 'pointer',
-              color: '#666',
-            }}
-          >
-            Go back to explore
+          <button onClick={onBack} style={{background: 'none', border: 'none', textDecoration: 'underline', cursor: 'pointer', color: '#666'}}>
+             Go back to explore
           </button>
         </div>
       ) : (
         <div className="card-grid">
-          {history.map((record) => (
-            <div
-              key={record.ticket.Ticket_Id}
-              style={{
+           {history.map((record) => (
+             <div 
+               key={record.ticket.Ticket_Id}
+               style={{
                 border: '1px solid #eee',
                 borderRadius: '12px',
                 padding: '24px',
@@ -1296,84 +940,45 @@ const SubscriptionsList = ({
                 background: 'white',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
                 display: 'flex',
-                flexDirection: 'column',
-              }}
-            >
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  marginBottom: '10px',
-                }}
-              >
-                <span
-                  style={{
-                    fontSize: '12px',
-                    background: '#333',
-                    color: 'white',
-                    padding: '2px 8px',
-                    borderRadius: '4px',
-                  }}
+                flexDirection: 'column'
+               }}
+             >
+                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px'}}>
+                    <span style={{fontSize: '12px', background: '#333', color: 'white', padding: '2px 8px', borderRadius: '4px'}}>
+                      {record.order.Status}
+                    </span>
+                    <span style={{fontSize: '12px', color: '#888'}}>
+                      {new Date(record.order.Created_At).toLocaleDateString()}
+                    </span>
+                </div>
+                
+                <h3 style={{marginTop: '5px', marginBottom: '5px', fontSize: '18px'}}>{record.attraction.Name}</h3>
+                <p style={{fontSize: '13px', color: '#666'}}>{record.attraction.City}, {record.attraction.Country}</p>
+                
+                <div style={{margin: '15px 0', borderTop: '1px solid #eee', paddingTop: '15px'}}>
+                   <div style={{fontSize: '12px', color: '#666'}}>Ticket ID</div>
+                   <div style={{fontFamily: 'monospace', fontWeight: 'bold'}}>{record.ticket.Ticket_Id}</div>
+                   <div style={{fontSize: '12px', color: '#666', marginTop: '5px'}}>Expires</div>
+                   <div>{new Date(record.ticket.Expiration_Date).toLocaleDateString()}</div>
+                </div>
+
+                <button 
+                  onClick={() => onActivate(record)}
+                  className="primary-button"
+                  style={{width: '100%', marginTop: 'auto'}}
                 >
-                  {record.order.Status}
-                </span>
-                <span style={{ fontSize: '12px', color: '#888' }}>
-                  {new Date(record.order.Created_At).toLocaleDateString()}
-                </span>
-              </div>
-
-              <h3
-                style={{
-                  marginTop: '5px',
-                  marginBottom: '5px',
-                  fontSize: '18px',
-                }}
-              >
-                {record.attraction.Name}
-              </h3>
-              <p style={{ fontSize: '13px', color: '#666' }}>
-                {record.attraction.City}, {record.attraction.Country}
-              </p>
-
-              <div
-                style={{
-                  margin: '15px 0',
-                  borderTop: '1px solid #eee',
-                  paddingTop: '15px',
-                }}
-              >
-                <div style={{ fontSize: '12px', color: '#666' }}>Ticket ID</div>
-                <div style={{ fontFamily: 'monospace', fontWeight: 'bold' }}>
-                  {record.ticket.Ticket_Id}
-                </div>
-                <div
-                  style={{ fontSize: '12px', color: '#666', marginTop: '5px' }}
-                >
-                  Expires
-                </div>
-                <div>
-                  {new Date(record.ticket.Expiration_Date).toLocaleDateString()}
-                </div>
-              </div>
-
-              <button
-                onClick={() => onActivate(record)}
-                className="primary-button"
-                style={{ width: '100%', marginTop: 'auto' }}
-              >
-                Go to Activation
-              </button>
-            </div>
-          ))}
+                  Go to Activation
+                </button>
+             </div>
+           ))}
         </div>
       )}
-      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+      <div style={{maxWidth: '1000px', margin: '0 auto'}}>
         <BackButton onClick={onBack} />
       </div>
     </div>
-  );
-};
+  )
+}
 
 // --- Main App Controller ---
 enum View {
@@ -1388,16 +993,14 @@ enum View {
 
 const App = () => {
   const [view, setView] = useState<View>(View.LANDING);
-
+  
   // State Entities
   const [currentUser, setCurrentUser] = useState<User | null>(null);
-  const [currentPreference, setCurrentPreference] = useState<Preference | null>(
-    null
-  );
+  const [currentPreference, setCurrentPreference] = useState<Preference | null>(null);
   const [selectedRec, setSelectedRec] = useState<Recommendation | null>(null);
   const [currentOrder, setCurrentOrder] = useState<Order | null>(null);
   const [currentTicket, setCurrentTicket] = useState<Ticket | null>(null);
-
+  
   // New: Booking History
   const [bookingHistory, setBookingHistory] = useState<BookingRecord[]>([]);
 
@@ -1421,22 +1024,22 @@ const App = () => {
   const handlePaymentSuccess = (order: Order, ticket: Ticket) => {
     setCurrentOrder(order);
     setCurrentTicket(ticket);
-
+    
     // Add to history
     if (selectedRec && selectedRec.Attraction) {
-      setBookingHistory((prev) => [
-        {
-          order,
-          ticket,
-          attraction: selectedRec.Attraction,
-        },
-        ...prev,
-      ]);
+       setBookingHistory(prev => [
+         {
+           order,
+           ticket,
+           attraction: selectedRec.Attraction
+         },
+         ...prev
+       ]);
     }
-
+    
     setView(View.ACTIVATION);
   };
-
+  
   const handleActivateFromHistory = (record: BookingRecord) => {
     setCurrentOrder(record.order);
     setCurrentTicket(record.ticket);
@@ -1446,10 +1049,10 @@ const App = () => {
       Matching_Score: 0,
       Attraction: record.attraction,
       Calculated_Cost_USD: record.order.Total_Price,
-      Ticket_Details: 'From History',
+      Ticket_Details: 'From History'
     });
     setView(View.ACTIVATION);
-  };
+  }
 
   const handleReset = () => {
     // Retain user if desired, or reset everything. Resetting partial for flow demo.
@@ -1457,7 +1060,7 @@ const App = () => {
     setSelectedRec(null);
     setCurrentOrder(null);
     setCurrentTicket(null);
-    setView(View.PREFERENCES);
+    setView(View.PREFERENCES); 
   };
 
   // Sign Out Handler
@@ -1473,63 +1076,41 @@ const App = () => {
 
   return (
     <>
-      <div
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          padding: '10px 20px',
-          background: 'white',
-          borderBottom: '1px solid #eee',
-          display: 'flex',
-          justifyContent: 'space-between',
-          zIndex: 100,
-          alignItems: 'center',
-        }}
-      >
-        <div
-          style={{ fontWeight: 'bold', cursor: 'pointer' }}
-          onClick={() => {
-            if (currentUser) setView(View.PREFERENCES);
-            else setView(View.LANDING);
-          }}
-        >
+      <div style={{position: 'fixed', top: 0, left: 0, right:0, padding: '10px 20px', background: 'white', borderBottom: '1px solid #eee', display: 'flex', justifyContent: 'space-between', zIndex: 100, alignItems: 'center'}}>
+        <div style={{fontWeight: 'bold', cursor: 'pointer'}} onClick={() => { if(currentUser) setView(View.PREFERENCES); else setView(View.LANDING); }}>
           AR/VR Tourism
         </div>
         {currentUser && (
-          <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-            <div style={{ fontSize: '14px', color: '#666' }}>
-              👤 {currentUser.Name}
-            </div>
-
+          <div style={{display: 'flex', gap: '15px', alignItems: 'center'}}>
+            <div style={{fontSize: '14px', color: '#666'}}>👤 {currentUser.Name}</div>
+            
             {/* New: My Bookings Button */}
             <button
-              onClick={() => setView(View.SUBSCRIPTIONS)}
-              style={{
-                background: '#eee',
-                border: 'none',
+               onClick={() => setView(View.SUBSCRIPTIONS)}
+               style={{
+                background: '#eee', 
+                border: 'none', 
                 borderRadius: '4px',
                 padding: '5px 10px',
                 cursor: 'pointer',
                 fontSize: '12px',
                 color: '#333',
-                fontWeight: 600,
+                fontWeight: 600
               }}
             >
               My Bookings
             </button>
 
-            <button
+            <button 
               onClick={handleSignOut}
               style={{
-                background: 'transparent',
-                border: '1px solid #ddd',
+                background: 'transparent', 
+                border: '1px solid #ddd', 
                 borderRadius: '4px',
                 padding: '5px 10px',
                 cursor: 'pointer',
                 fontSize: '12px',
-                color: '#333',
+                color: '#333'
               }}
             >
               Sign Out
@@ -1537,61 +1118,53 @@ const App = () => {
           </div>
         )}
       </div>
-
-      <div style={{ marginTop: '40px' }}>
+      
+      <div style={{marginTop: '40px'}}>
         {view === View.LANDING && <Landing onStart={handleStart} />}
-
-        {view === View.SIGNUP && (
-          <SignUp
-            onSubmit={handleSignUp}
-            onBack={() => setView(View.LANDING)}
-          />
-        )}
-
+        
+        {view === View.SIGNUP && <SignUp onSubmit={handleSignUp} onBack={() => setView(View.LANDING)} />}
+        
         {view === View.PREFERENCES && (
-          <PreferencesForm
-            onSubmit={handlePreferences}
-            initialData={currentPreference}
-            onBack={() => setView(View.SIGNUP)}
-          />
-        )}
-
-        {view === View.RECOMMENDATIONS && currentPreference && (
-          <RecommendationsList
-            preference={currentPreference}
-            onSelect={handleSelectRecommendation}
-            onBack={() => setView(View.PREFERENCES)}
-          />
-        )}
-
-        {view === View.PAYMENT &&
-          selectedRec &&
-          currentUser &&
-          currentPreference && (
-            <PaymentProcess
-              recommendation={selectedRec}
-              user={currentUser}
-              preference={currentPreference}
-              onPay={handlePaymentSuccess}
-              onBack={() => setView(View.RECOMMENDATIONS)}
+            <PreferencesForm 
+              onSubmit={handlePreferences} 
+              initialData={currentPreference} 
+              onBack={() => setView(View.SIGNUP)}
             />
-          )}
-
+        )}
+        
+        {view === View.RECOMMENDATIONS && currentPreference && (
+            <RecommendationsList 
+                preference={currentPreference} 
+                onSelect={handleSelectRecommendation} 
+                onBack={() => setView(View.PREFERENCES)} 
+            />
+        )}
+        
+        {view === View.PAYMENT && selectedRec && currentUser && currentPreference && (
+            <PaymentProcess 
+                recommendation={selectedRec} 
+                user={currentUser} 
+                preference={currentPreference}
+                onPay={handlePaymentSuccess} 
+                onBack={() => setView(View.RECOMMENDATIONS)} 
+            />
+        )}
+        
         {view === View.ACTIVATION && currentTicket && selectedRec && (
-          <TourActivation
-            ticket={currentTicket}
-            attraction={selectedRec.Attraction}
-            onReset={handleReset}
-          />
+            <TourActivation 
+                ticket={currentTicket} 
+                attraction={selectedRec.Attraction} 
+                onReset={handleReset} 
+            />
         )}
 
         {/* New View Render */}
         {view === View.SUBSCRIPTIONS && (
-          <SubscriptionsList
-            history={bookingHistory}
-            onActivate={handleActivateFromHistory}
-            onBack={() => setView(View.PREFERENCES)} // Or back to dashboard
-          />
+           <SubscriptionsList 
+             history={bookingHistory}
+             onActivate={handleActivateFromHistory}
+             onBack={() => setView(View.PREFERENCES)} // Or back to dashboard
+           />
         )}
       </div>
     </>
